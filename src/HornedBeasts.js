@@ -8,6 +8,7 @@ import React from 'react';
 //   - alt and title attributes,
 //   - a <p> that displays the description
 
+
 class HornedBeasts extends React.Component {
   render() {
     return (

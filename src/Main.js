@@ -1,6 +1,8 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import HornedBeasts from './HornedBeasts.js';
+import { Data } from './Data.js';
 
 // The Main component
 // - render at least two copies of a component called HornedBeasts
@@ -11,15 +13,14 @@ class Main extends React.Component{
   render(){
     return(
       <div>
-        <h2>Here are the Horned Beasts</h2>
-        <HornedBeasts title="Ahab pursues Moby-Dick" imageUrl="https://www.nprillinois.org/sites/wuis/files/styles/x_large/public/201606/moby-dick.jpg" alt="Harpooneer" description="Towards thee I roll, thou all-destroying but unconquering whale; to the last I grapple with thee; from hell's heart I stab at thee; for hate's sake I spit my last breath at thee."/>
 
-        <HornedBeasts title="Moby Dick crushes boat" imageUrl="https://s-usih.org/wp-content/uploads/2013/10/Moby_Dick_2.png" alt="Whale captures rowboat in mouth" description="Yummm"/>
+        {
+          Data.map(item => <HornedBeasts title={item.title} imageUrl={item.image_url} alt={item.keyword} description={item.description} key={uuidv4()}/>)
+        }
+
       </div>
     );
   }
 }
 
 export default Main;
-
-
