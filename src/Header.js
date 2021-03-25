@@ -4,7 +4,11 @@ import React from 'react';
 
 class Header extends React.Component {
   render() {
-    return (<h1>A Whale of a Tale</h1>);
+    return (
+      <header>
+        <h1>Holy Horns Batman!</h1>
+      </header>
+    );
   }
 }
 
