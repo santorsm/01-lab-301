@@ -2,7 +2,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import HornedBeasts from './HornedBeasts.js';
-import { Data } from './Data.js';
+import { data } from './data.js';
 
 // The Main component
 // - render at least two copies of a component called HornedBeasts
@@ -12,13 +12,13 @@ import { Data } from './Data.js';
 class Main extends React.Component{
   render(){
     return(
-      <div>
+      <main>
 
         {
-          Data.map(item => <HornedBeasts title={item.title} imageUrl={item.image_url} alt={item.keyword} description={item.description} key={uuidv4()}/>)
+          data.map(item => <HornedBeasts title={item.title} imageUrl={item.image_url} alt={item.keyword} description={item.description} key={uuidv4()}/>)
         }
 
-      </div>
+      </main>
     );
   }
 }
