@@ -24,7 +24,7 @@ class HornedBeasts extends React.Component {
         <h2 className="title">{this.props.title}</h2>
         <img src={this.props.imageUrl} alt={this.props.alt} width="200" height="150" title={this.props.title} onClick={this.imageClicked}></img>
         <p className="description">{this.props.description}</p>
-        <span onClick>{this.state.numberOfClicks}</span>
+        <span onClick={this.imageClicked}> ♥️ {this.state.numberOfClicks}</span>
       </div>
     );
   }
