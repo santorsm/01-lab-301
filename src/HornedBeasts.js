@@ -1,10 +1,11 @@
 import React from 'react';
 
+import Card from 'react-bootstrap/Card';
 
 
 class HornedBeasts extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       numberOfClicks: null
@@ -20,12 +21,18 @@ class HornedBeasts extends React.Component {
 
   render() {
     return (
-      <div className="beast">
-        <h2 className="title">{this.props.title}</h2>
-        <img src={this.props.imageUrl} alt={this.props.alt} width="200" height="150" title={this.props.title} onClick={this.imageClicked}></img>
-        <p className="description">{this.props.description}</p>
-        <span onClick={this.imageClicked}> ♥️ {this.state.numberOfClicks}</span>
-      </div>
+
+      <Card className="beast">
+        <Card.Img variant="top" src={this.props.imageUrl} onClick={this.imageClicked}></Card.Img>
+        <Card.Body>
+          <Card.Title className="title">{this.props.title}</Card.Title>
+          <Card.Text className="description">
+            {this.props.description}
+          </Card.Text>
+          <span onClick={this.imageClicked}> ♥️ {this.state.numberOfClicks}</span>
+        </Card.Body>
+      </Card>
+
     );
   }
 }
