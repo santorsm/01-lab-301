@@ -2,7 +2,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import HornedBeasts from './HornedBeasts.js';
-import { data } from './data.js';
+import data from './data.json';
 
 class Main extends React.Component{
 
