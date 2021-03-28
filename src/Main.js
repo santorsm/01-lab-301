@@ -1,23 +1,24 @@
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import CardColumns from 'react-bootstrap/CardColumns';
 import HornedBeasts from './HornedBeasts';
-import data from './data.json';
+
+
 
 class Main extends React.Component{
 
   render(){
+    console.log(this.props);
     return(
       <main>
         <CardColumns>
           {
-            data.map(item => <HornedBeasts title={item.title} imageUrl={item.image_url} alt={item.keyword} description={item.description} key={uuidv4()}/>)
+            this.props.data.map((item, index) => <HornedBeasts title={item.title} imageUrl={item.image_url} alt={item.keyword} description={item.description} key={index} showModal={this.props.showModal} hideModal={this.props.hideModal}index={index}/>)
           }
         </CardColumns>
       </main>
     );
-  }
+  }s
 }
 
 export default Main;

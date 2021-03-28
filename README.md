@@ -73,4 +73,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Lab 02
 
-24 March - Michelle guided me on the proper placement of my imageClicked function
+24 March - Michelle guided me on the proper placement of my `imageClicked` function
+
+
+### Lab 03
+
+Number and name of feature: 01 Display Modal
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 1300
+
+Finish time: 1830
+
+Actual time needed to complete: 5+30
+
+26 March:
+
+- Michelle guided me on sharing data between `App.js` and `Main.js`
+- Ryan helped me work through sending the function to `Main.js`
