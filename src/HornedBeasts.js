@@ -17,7 +17,12 @@ class HornedBeasts extends React.Component {
     this.setState({
       numberOfClicks: this.state.numberOfClicks + 1
     });
+    this.props.showModal(this.props.index);
   }
+
+  changeTitle = () => {
+    this.setState({ title: 'New title' });
+  };
 
   render() {
     return (
@@ -25,7 +30,7 @@ class HornedBeasts extends React.Component {
       <Card className="beast">
         <Card.Img variant="top" src={this.props.imageUrl} onClick={this.imageClicked}></Card.Img>
         <Card.Body>
-          <Card.Title className="title">{this.props.title}</Card.Title>
+          <Card.Title className="title" >{this.props.title}</Card.Title>
           <Card.Text className="description">
             {this.props.description}
           </Card.Text>
