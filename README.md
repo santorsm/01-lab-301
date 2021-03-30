@@ -92,3 +92,8 @@ Actual time needed to complete: 5+30
 
 - Michelle guided me on sharing data between `App.js` and `Main.js`
 - Ryan helped me work through sending the function to `Main.js`
+
+29 March:
+
+- Code review helped me to correct the issues I experienced with my Modal
+- Relied on Michelle's css code to render the image within the modal
