@@ -1,19 +1,23 @@
 import './App.css';
 import React from 'react';
 
+
 import Footer from './Footer';
 import Header from './Header';
+import Horns from './HornForm';
 import Main from './Main';
 import SelectedBeast from './SelectedBeast';
 
 import data from './data.json';
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       show: false,
-      beast: {}
+      beast: {},
+      data: data
     };
   }
 
@@ -31,11 +35,21 @@ class App extends React.Component {
     });
   }
 
+  updateForFilter = (data) =>{
+    this.setState({
+      data: data
+    });
+  }
+
   render() {
 
     return (
       <div>
         <Header />
+        <Horns
+          data={this.state.data}
+          updateForFilter={this.updateForFilter}
+        />
         <SelectedBeast
           show={this.state.show}
           hideModal={this.hideModal}
