@@ -97,3 +97,9 @@ Actual time needed to complete: 5+30
 
 - Code review helped me to correct the issues I experienced with my Modal
 - Relied on Michelle's css code to render the image within the modal
+
+## Lab 04
+
+31 March:
+
+- Vince pointed me in the direction of some YouTube videos for additional assistance
