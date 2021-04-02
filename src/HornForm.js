@@ -1,17 +1,18 @@
 import React from 'react';
-import data from './data.json';
+
 import Form from 'react-bootstrap/Form';
 
 class Horns extends React.Component {
 
 
-  numberOfHorns(event) {
-    const selection = event.target.value;
-    const hornedBeasts = data;
-    const selectedNumberOfHorns = hornedBeasts.filter(d =>{
-      return d.horns === selection;
-    });
-    this.props.updateForFilter(selectedNumberOfHorns);
+  numberOfHorns = event => {
+    const selection = parseInt(event.target.value);
+    if (selection === 0){
+      this.props.updateForFilter(selection);
+    } else {
+      const selectedNumberOfHorns = this.props.data.filter(d => d.horns === selection);
+      this.props.updateForFilter(selectedNumberOfHorns);
+    }
   }
 
   render() {
@@ -20,11 +21,14 @@ class Horns extends React.Component {
       <div>
         <Form>
           <Form.Group >
-            <Form.Label>Select the number of horns</Form.Label>
+            <Form.Label></Form.Label>
             <Form.Control id="horns"as="select"onChange={this.numberOfHorns}>
               <option value="">Select number of horns</option>
+              <option value="0">View all</option>
               <option value="1">1</option>
               <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="100">100</option>
             </Form.Control>
           </Form.Group>
         </Form>

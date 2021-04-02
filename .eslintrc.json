@@ -3,32 +3,18 @@
     "Mustache": true,
     "$": true
   },
-  "extends": [
-	  "eslint:recommended",
-  	"plugin:react/recommended"
-  ],
+  "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaFeatures": {
-	    	"jsx": true
-	 },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "ecmaVersion": 6
   },
   "env": {
     "browser": true,
     "es6": true,
     "jest": true,
     "jquery": true,
-    "node": true,
-    "es2021": true
+    "node": true
   },
-  "plugins":[
-	  	"react"
-	 ],
   "rules": {
-	  "react/react-in-jsx-scope": "off",
-	  "react/forbid-prop-types": [0, { "forbid": ["any"] }],
-    "react/prop-types": 0,
     "eol-last": "error",
     "eqeqeq": [
       "error",
