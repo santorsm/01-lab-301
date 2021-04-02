@@ -17,7 +17,8 @@ class App extends React.Component {
     this.state = {
       show: false,
       beast: {},
-      data: data
+      data: data,
+      beastWithHorns: data
     };
   }
 
@@ -35,10 +36,16 @@ class App extends React.Component {
     });
   }
 
-  updateForFilter = (data) =>{
-    this.setState({
-      data: data
-    });
+  updateForFilter = (selectedNumberOfHorns) =>{
+    if (selectedNumberOfHorns === 0){
+      this.setState({
+        beastWithHorns: this.state.data
+      });
+    } else {
+      this.setState({
+        beastWithHorns: selectedNumberOfHorns
+      });
+    }
   }
 
   render() {
@@ -48,6 +55,7 @@ class App extends React.Component {
         <Header />
         <Horns
           data={this.state.data}
+          beastWithHorns={this.state.beastWithHorns}
           updateForFilter={this.updateForFilter}
         />
         <SelectedBeast
@@ -56,7 +64,7 @@ class App extends React.Component {
           beast={this.state.beast}
         />
         <Main
-          data={data}
+          data={this.state.beastWithHorns}
           showModal={this.showModal}
         />
         <Footer />

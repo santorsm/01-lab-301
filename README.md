@@ -103,3 +103,8 @@ Actual time needed to complete: 5+30
 31 March:
 
 - Vince pointed me in the direction of some YouTube videos for additional assistance
+
+01 April:
+
+- Made changes to code after watching this evening's code review
+- Michael Eclavea gave some great instruction to help me ensure the proper data was being passed from my `App.js` and was correctly rendered on the screen
